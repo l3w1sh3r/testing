@@ -8,14 +8,14 @@ public class TaxiFareCals {
       if (km < 0) {
       System.out.printf("Invalid input");
       } else if (km <= 1) {
-        totalFare = 15000;  
+        totalFare = 15000;
       } else if (km <= 5) {
         totalFare = 15000 + (km - 1) * 13000;
       } else {
         totalFare = 15000 + 4 * 13000 + (km - 5) * 11000;
       }
       if (km > 120) {
-        totalFare = totalFare * 0.9;  // Giảm 10%
+        totalFare = totalFare * 0.9;
       }
 
       System.out.printf("Total Fare: %.2f VND\n", totalFare);
