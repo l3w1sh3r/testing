@@ -2,9 +2,7 @@
 import java.util.Scanner;
 
 public class TaxiFareCals {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        double km = scanner.nextDouble();
+    public static double fareCalculator(double km) {
         double totalFare = 0;
         if (km < 0) {
             System.out.print("Invalid input\n");
@@ -18,6 +16,13 @@ public class TaxiFareCals {
         if (km > 120) {
             totalFare = totalFare * 0.9;
         }
+        return totalFare;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double km = scanner.nextDouble();
+        double totalFare = fareCalculator(km);
 
         System.out.printf("Total Fare: %.2f VND\n", totalFare);
 
